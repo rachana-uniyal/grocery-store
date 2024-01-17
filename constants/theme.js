@@ -12,7 +12,7 @@ const COLORS = {
     gray1: "#A9B4BC",
     gray2: "#C5CDD2",
     gray3: "#E7ECF0",
-    white:"#F8F9FB",
+    gray4:"#F8F9FB",
 };
 
 const FONT = {

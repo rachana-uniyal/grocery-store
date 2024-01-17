@@ -19,7 +19,7 @@ const styles = StyleSheet.create({
         paddingBottom: 20
     } ,
     headerText: { 
-        color: COLORS.white,
+        color: COLORS.gray4,
         fontSize: SIZES.h1,
         fontFamily: FONT.bold
     },
@@ -86,14 +86,14 @@ const styles = StyleSheet.create({
         alignItems: 'flex-end',
       },
       titleText: {
-        fontSize: SIZES.body2,
-        color: COLORS.white,
+        fontSize: SIZES.small,
+        color: 'white',
         marginBottom: 5,
         opacity: 0.5
       },
       mainText: {
-        fontSize: SIZES.h4,
-        color: COLORS.white,
+        fontSize: SIZES.body2,
+        color: 'white',
     },
     arrowIcon: {
         marginLeft: 30
