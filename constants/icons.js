@@ -13,9 +13,11 @@ import plus from "../assets/icons/plus.png"
 import minus from "../assets/icons/minus.png"
 import bagblack from "../assets/icons/bagblack.png"
 import pinkheart from "../assets/icons/pinkheart.png"
+import banner from "../assets/icons/banner.png"
 
 export default {
     bag,
+    banner,
     bagblack,
     plus,
     minus,

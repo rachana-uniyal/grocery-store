@@ -4,8 +4,8 @@ import styles from './imageSlider.style'
 import { icons } from '../../constants';
 import { useFavorites } from '../../context/FavoriteContext';
 
-const { width } = Dimensions.get('window');
-const style = styles(width)
+const { width:viewportWidth } = Dimensions.get('window');
+const style = styles(viewportWidth)
 
 const ImageSlider = ({ images ,id}) => {
 
@@ -41,6 +41,9 @@ const ImageSlider = ({ images ,id}) => {
       horizontal
       pagingEnabled
       showsHorizontalScrollIndicator={false}
+      snapToAlignment={'center'}
+      snapToInterval={viewportWidth} // Your cell width here
+      decelerationRate={'fast'}
     />
   );
 };

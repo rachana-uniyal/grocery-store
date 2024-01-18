@@ -28,12 +28,13 @@ const styles = StyleSheet.create({
     priceText:{
         fontSize: SIZES.body2,
         color: COLORS.primary1,
-        fontFamily: FONT.regular,
+        fontFamily: FONT.bold,
         marginRight:15
     },
     discountText:{
         fontSize:SIZES.small,
-        color:'white'
+        color:'white',
+        fontFamily: FONT.regular,
     },
     discountWrapper:{
         backgroundColor: COLORS.primary1,
@@ -106,6 +107,12 @@ const styles = StyleSheet.create({
         textAlign:'center',
         backgroundColor:COLORS.secondary1
     },
+    activityIndicatorWrapper:{
+        margin:20,
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center'
+    }
   
 })
 

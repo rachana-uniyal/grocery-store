@@ -1,8 +1,8 @@
-import { View,Text, Image, TouchableOpacity, SafeAreaView,ScrollView } from "react-native";
+import { View,Text, Image, TouchableOpacity, SafeAreaView,ScrollView, ActivityIndicator } from "react-native";
 import { useGlobalSearchParams, useRouter } from "expo-router"
 import useFetch from "../../hook/useFetch";
 import styles from "./productDetails.style";
-import { icons } from "../../constants";
+import { icons, COLORS } from "../../constants";
 import ImageSlider from "./ImageSlider";
 import { useCart } from "../../context/CartContext";
 
@@ -24,6 +24,12 @@ const ProductDetails = () =>{
     }
 
     return(<SafeAreaView style={styles.container}>
+            {isLoading ? (
+                <View style={styles.activityIndicatorWrapper}>
+                    <ActivityIndicator size='large'  color={COLORS.gray2}/>
+                </View>) : error ? (
+                <Text>Something went wrong</Text>
+                ) : (
             <ScrollView>
             <View style={styles.headerContainer}>
                 <TouchableOpacity onPress={() => router.push('/home')}>
@@ -61,6 +67,7 @@ const ProductDetails = () =>{
                 <Text style={[styles.descriptionText, styles.detailText]}>{data.description}</Text>
             </View>
             </ScrollView>
+            )}
         </SafeAreaView>)
 }
 

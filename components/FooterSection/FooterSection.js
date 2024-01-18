@@ -1,17 +1,46 @@
-import React,{ useState} from 'react';
+import React,{ useState, useRef} from 'react';
 import { View, Text, Image, TouchableOpacity,TouchableWithoutFeedback, Animated } from 'react-native';
 import { icons } from '../../constants';
 import styles from './footerSection.style.js';
 
 
-const FooterButton = ({iconPath, label}) =>(
-    <View style={styles.footerButton}>
-        <TouchableOpacity style={styles.iconButton}>
-            <Image source={iconPath} style={styles.icon} />
-        </TouchableOpacity>
-        <Text style={styles.iconText}>{label}</Text>
-    </View>
-)
+const FooterButton = ({ iconPath, label }) => {
+  const translateY = useRef(new Animated.Value(0)).current;
+
+  const handlePressIn = () => {
+    Animated.spring(translateY, {
+      toValue: -40, 
+      friction: 5, 
+      useNativeDriver: true, 
+    }).start();
+  };
+
+  const handlePressOut = () => {
+    Animated.spring(translateY, {
+      toValue: 0, 
+      friction: 5,
+      useNativeDriver: true,
+    }).start();
+  };
+
+  const animatedStyle = {
+    transform: [{ translateY }],
+  };
+
+  return (
+    <Animated.View style={[styles.footerButton, animatedStyle]}>
+      <TouchableOpacity
+        style={styles.iconButton}
+        onPressIn={handlePressIn}   // Add this line
+        onPressOut={handlePressOut} // Add this line
+      >
+        <Image source={iconPath} style={styles.icon} />
+      </TouchableOpacity>
+      <Text style={styles.iconText}>{label}</Text>
+    </Animated.View>
+  );
+};
+
 
 
 const FooterSection = () => {

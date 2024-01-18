@@ -16,6 +16,12 @@ const styles = StyleSheet.create({
         flexDirection: 'row', 
         flexWrap: 'wrap', 
         justifyContent: 'space-between', 
+    },
+    activityIndicatorWrapper:{
+        margin:20,
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center'
     }
 })
 

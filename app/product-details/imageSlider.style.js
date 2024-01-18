@@ -40,7 +40,21 @@ const styles = (width) =>StyleSheet.create({
         height: 24,
         width: 24,
         resizeMode:'contain'
-    }
+    },
+    
+    paginationContainer: {
+        flexDirection: 'row',
+        justifyContent: 'center',
+        alignItems: 'center',
+        marginTop: 10,
+      },
+      paginationDot: {
+        width: 10,
+        height: 10,
+        borderRadius: 5,
+        backgroundColor: 'yellow',
+        marginHorizontal: 8,
+      },
 })
 
 export default styles;

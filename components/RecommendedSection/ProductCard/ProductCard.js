@@ -6,7 +6,6 @@ import { useFavorites } from "../../../context/FavoriteContext";
 import { useCart } from '../../../context/CartContext';
 
 const ProductCard = React.memo(({id,title, thumbnail, price, handleNavigate}) =>{
-    console.log("productcard",id)
 
     const { addToCart} = useCart()
     const { addFavorite, removeFavorite, isFavorite } = useFavorites();

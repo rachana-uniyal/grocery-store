@@ -3,9 +3,10 @@ import {View, Text,TouchableOpacity, FlatList, Image, Animated} from 'react-nati
 import { icons } from '../../constants'
 import styles from './cart.styles';
 import { useCart } from '../../context/CartContext';
+import { useRouter } from "expo-router";
 
 const ShoppingCart = () =>{
-
+  const router = useRouter()
   const { cart ,increaseQuantity, decreaseQuantity,removeFromCart } = useCart()
 
   const subtotal = cart.reduce((total, item) => total + (item.price * item.quantity), 0);
@@ -86,7 +87,7 @@ const renderItem = ({ item }) => {
       return (
         <View style={styles.container}>
           <View style={styles.header}>
-            <TouchableOpacity>
+            <TouchableOpacity onPress={() => router.push('/home')}>
               <Image source={icons.backarrow}/>
             </TouchableOpacity>
             <Text style={styles.headerTitle}>Shopping Cart ({cart?.length})</Text>
