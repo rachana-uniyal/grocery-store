@@ -91,7 +91,20 @@ const styles = StyleSheet.create({
         margin:10
     },
     bagIcon:{
-        margin:10
+        marginRight:10
+    },
+    cartItems:{
+        position: "relative",
+        height:24,
+        width: 24,
+        borderRadius:12,
+        color:'white',
+        fontFamily: FONT.bold,
+        top:9,
+        left:4,
+        zIndex:1,
+        textAlign:'center',
+        backgroundColor:COLORS.secondary1
     },
   
 })

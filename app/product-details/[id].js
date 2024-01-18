@@ -1,22 +1,36 @@
 import { View,Text, Image, TouchableOpacity, SafeAreaView,ScrollView } from "react-native";
-import { useGlobalSearchParams } from "expo-router"
+import { useGlobalSearchParams, useRouter } from "expo-router"
 import useFetch from "../../hook/useFetch";
 import styles from "./productDetails.style";
 import { icons } from "../../constants";
 import ImageSlider from "./ImageSlider";
+import { useCart } from "../../context/CartContext";
 
 const ProductDetails = () =>{
-    const params = useGlobalSearchParams()
+    const params = useGlobalSearchParams();
+    const router = useRouter();
+
     const { data, isLoading, error } = useFetch(params?.id, null);
     console.log(data)
+
+    const { addToCart,cart } = useCart()
+
+    const handleAddPress = () =>{
+        if(data){
+            const {id,title,thumbnail,price} = data
+            addToCart({id,title,thumbnail,price})
+        }
+        
+    }
 
     return(<SafeAreaView style={styles.container}>
             <ScrollView>
             <View style={styles.headerContainer}>
-                <TouchableOpacity>
+                <TouchableOpacity onPress={() => router.push('/home')}>
                     <Image source={icons.backarrow}/>
                 </TouchableOpacity>
-                <TouchableOpacity>
+                <TouchableOpacity onPress={() => router.push('/cart')}>
+                    <Text style={styles.cartItems}>{cart?.length}</Text>
                     <Image source={icons.bagblack} style={styles.bagIcon}/>
                 </TouchableOpacity>
             </View>
@@ -35,10 +49,10 @@ const ProductDetails = () =>{
                 </View>
             </View>
             <View style={styles.buttonsContainer}>
-                <TouchableOpacity style={styles.button}>
+                <TouchableOpacity style={styles.button} onPress={handleAddPress}>
                     <Text style={styles.addToCartBtnText}>Add To Cart</Text>
                 </TouchableOpacity>
-                <TouchableOpacity style={[styles.button, styles.buyNowBtn]}>
+                <TouchableOpacity style={[styles.button, styles.buyNowBtn]} onPress={() => router.push('/cart')}>
                     <Text style={styles.buyNowBtnText}>Buy Now</Text>
                 </TouchableOpacity>
             </View>

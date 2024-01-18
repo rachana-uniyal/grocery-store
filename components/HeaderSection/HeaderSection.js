@@ -1,32 +1,30 @@
 import {View, Text, TextInput, Image,TouchableOpacity} from "react-native";
 import styles from "./headerSection.style";
 import { icons, COLORS } from "../../constants"
+import { useCart } from "../../context/CartContext";
+import { useRouter } from "expo-router";
 
 const HeaderSection = ()=>{
-
+    const { cart } = useCart()
+    const router = useRouter()
+    
     return(
         <View style={styles.container} >
             <View style={styles.header}>
               <Text style={styles.headerText}>Hey, Rachana</Text>
-              <View style={styles.cartWrapper}>
-              <Image
-                    source={icons.cartItems}
-                    resizemode='contain'
-                    style={styles.cartItems}  
-                />
+              <TouchableOpacity style={styles.cartWrapper} onPress={() => router.push('/cart')}>
+              <Text style={styles.cartItems}>{cart?.length}</Text>
                 <Image
                     source={icons.bag}
-                    resizemode='contain'
                     style={styles.cart}
                 />
-              </View>
+              </TouchableOpacity>
             </View>
             <View style={styles.searchContainer}>
                 <View style={styles.searchIconWrapper}>
                 <TouchableOpacity>
                     <Image 
                         source={icons.search}
-                        resizemode='contain'
                         style={styles.searchIcon}
                     />
                     </TouchableOpacity>

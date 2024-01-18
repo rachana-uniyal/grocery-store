@@ -8,6 +8,7 @@ const styles = StyleSheet.create({
     },
    
     itemContainer: {
+      height:42,
       display:'flex',
       flexDirection: 'row',
       alignItems: 'center',

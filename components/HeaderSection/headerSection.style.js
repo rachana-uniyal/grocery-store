@@ -26,15 +26,21 @@ const styles = StyleSheet.create({
     cart:{
         height: 24,
         width: 24,
+        resizeMode:'cover',
         top: -8
     },
     cartItems:{
         position: "relative",
         height:24,
         width: 24,
+        borderRadius:12,
+        color:'white',
+        fontFamily: FONT.bold,
         top: 6,
         left:9,
-        zIndex:1
+        zIndex:1,
+        textAlign:'center',
+        backgroundColor:COLORS.secondary1
     },
     cartWrapper:{
         display:'block',
@@ -70,7 +76,8 @@ const styles = StyleSheet.create({
         marginRight:15,
         height: 18,
         width:18,
-        marginLeft:25
+        marginLeft:25,
+        resizeMode:'contain'
     },
 
     deliveryContainer: {
