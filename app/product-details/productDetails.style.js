@@ -18,9 +18,6 @@ const styles = StyleSheet.create({
         flexDirection:'row',
         marginLeft:20
     },
-    ImgSliderContainer:{
-        marginTop:10
-    },
     priceWrapper:{
         height:24,
         marginLeft:20,
@@ -96,25 +93,7 @@ const styles = StyleSheet.create({
     bagIcon:{
         margin:10
     },
-    heartContainer:{
-        height:58,
-        width:58,
-        borderRadius:20,
-        backgroundColor:'white',
-        position:'absolute',
-        zIndex:1,
-        right:40,
-        top:20,
-        display:'flex',
-        alignItems:'center',
-        justifyContent:'center'
-    },
-    imageWrapper:{
-        width: 375,
-        height: 207,
-        backgroundColor: COLORS.gray4,
-        position:'relative',   
-    }
+  
 })
 
 export default styles;
