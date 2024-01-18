@@ -1,9 +1,11 @@
 import { View, Text, Image, TouchableOpacity } from "react-native";
+import { useRouter } from "expo-router";
 import styles from "./productCard.style";
 import { icons } from "../../../constants";
 
 const ProductCard = ({title, thumbnail, price, handleNavigate}) =>{
 
+    const router = useRouter()
     
     return(
         <TouchableOpacity style={styles.container} onPress={handleNavigate}>
@@ -16,7 +18,9 @@ const ProductCard = ({title, thumbnail, price, handleNavigate}) =>{
             <View style={styles.productInfoContainer}>
                 <View style={styles.priceWrapper}>
                     <Text style={styles.priceText}>${price}</Text>
-                    <View style={styles.addToCart}><Text style={styles.addToCartText}>+</Text></View>
+                    <TouchableOpacity style={styles.addToCart}  onPress={() => router.push('/cart')}>
+                        <Text style={styles.addToCartText}>+</Text>
+                    </TouchableOpacity>
                 </View>
                 <Text style={styles.titleText}>{title}</Text>
                 

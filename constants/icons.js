@@ -9,9 +9,15 @@ import category from "../assets/icons/category.png"
 import more from "../assets/icons/more.png"
 import backarrow from "../assets/icons/backarrow.png"
 import stars from "../assets/icons/stars.png"
+import plus from "../assets/icons/plus.png"
+import minus from "../assets/icons/minus.png"
+import bagblack from "../assets/icons/bagblack.png"
 
 export default {
     bag,
+    bagblack,
+    plus,
+    minus,
     cartItems,
     search,
     arrow,
