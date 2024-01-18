@@ -1,17 +1,33 @@
 import React from 'react';
-import { FlatList, View, Image, Dimensions } from 'react-native';
+import { FlatList, View, Image, Dimensions, TouchableOpacity } from 'react-native';
 import styles from './imageSlider.style'
 import { icons } from '../../constants';
+import { useFavorites } from '../../context/FavoriteContext';
 
 const { width } = Dimensions.get('window');
 const style = styles(width)
 
-const ImageSlider = ({ images }) => {
+const ImageSlider = ({ images ,id}) => {
+
+  const { addFavorite, removeFavorite, isFavorite } = useFavorites();
+
+  const handleFavoritePress = () => {
+      if (isFavorite(id)) {
+        removeFavorite(id);
+      } else {
+        addFavorite(id);
+      }
+    };
+
   const renderItem = ({ item }) => (
     <View style={style.imageWrapper}>
-      <View style={style.heartContainer}>
-        <Image source={icons.heart}/>
-        </View>
+      <TouchableOpacity style={style.heartContainer} onPress={handleFavoritePress}>
+        {console.log("id",id)}
+        {isFavorite(id) ?
+          <Image source={icons.pinkheart} style={style.favIcon}/>:
+          <Image source={icons.vector} style={style.favIcon}/>
+         }
+        </TouchableOpacity>
       <Image source={{ uri: item }} style={style.image} />
     </View>
   );

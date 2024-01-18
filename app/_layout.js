@@ -1,5 +1,6 @@
 import { Stack } from 'expo-router';
 import { useFonts } from 'expo-font';
+import { FavoriteProvider } from "../context/FavoriteContext";
 
 export default function Layout() {
   
@@ -15,8 +16,10 @@ export default function Layout() {
   }
 
   return (
-          <Stack>
-            <Stack.Screen name="home"/>   
-          </Stack>
+          <FavoriteProvider>
+            <Stack>
+              <Stack.Screen name="home"/>   
+            </Stack>
+          </FavoriteProvider>
         )
 } 

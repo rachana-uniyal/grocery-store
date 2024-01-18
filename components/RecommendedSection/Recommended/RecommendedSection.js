@@ -1,10 +1,12 @@
+import React from "react";
 import { View, Text, Image, TouchableOpacity, ActivityIndicator, } from "react-native";
 import { useRouter } from "expo-router";
 import styles from "./recommendedSection.style";
 import ProductCard from "../ProductCard/ProductCard";
 import useFetch from "../../../hook/useFetch";
 
-const RecommendedSection = () =>{
+const RecommendedSection = React.memo(() =>{
+    console.log("recommended")
     const router = useRouter()
     const { data, isLoading, error } = useFetch('', null);
     
@@ -20,6 +22,7 @@ const RecommendedSection = () =>{
                     data?.products?.map((product) => (
                         <ProductCard
                         key={product.id}
+                        id={product.id}
                         title={product.title}
                         thumbnail={product.thumbnail}
                         price={product.price}  
@@ -30,6 +33,6 @@ const RecommendedSection = () =>{
                 </View>
             </View>
     )
-}
+})
 
 export default RecommendedSection;

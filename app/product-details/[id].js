@@ -27,7 +27,7 @@ const ProductDetails = () =>{
                 <Image source={icons.stars}/>
                 <Text>110 Reviews</Text>
             </View>
-            <ImageSlider images={data.images}/>
+            <ImageSlider images={data.images} id={data.id}/>
             <View style={styles.priceWrapper}>
                 <Text style={styles.priceText}>${data.price}</Text>
                 <View style={styles.discountWrapper}>

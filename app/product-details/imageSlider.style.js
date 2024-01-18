@@ -34,6 +34,12 @@ const styles = (width) =>StyleSheet.create({
         height: '100%',
         width:'100%',
         resizeMode:'center'
+    },
+
+    favIcon:{
+        height: 24,
+        width: 24,
+        resizeMode:'contain'
     }
 })
 

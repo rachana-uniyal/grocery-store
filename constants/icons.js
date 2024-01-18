@@ -12,6 +12,7 @@ import stars from "../assets/icons/stars.png"
 import plus from "../assets/icons/plus.png"
 import minus from "../assets/icons/minus.png"
 import bagblack from "../assets/icons/bagblack.png"
+import pinkheart from "../assets/icons/pinkheart.png"
 
 export default {
     bag,
@@ -20,6 +21,7 @@ export default {
     minus,
     cartItems,
     search,
+    pinkheart,
     arrow,
     vector,
     home,
