@@ -26,17 +26,19 @@ Frontend (Mobile Application)
 - Quantity adjustment and dynamic total amount calculation in Cart
 - Transition animations for cart updates
 
-## Installation & Getting Started
-```bash
-git clone https://github.com/your-github/grocery-store-app
-cd grocery-store-app
-npm install
-npm start
-
 ## Technology Stack
 - React Native
 - Expo
 - Expo-route for navigation
 - Context API for state management
+
+## Installation & Getting Started
+```bash
+git clone https://github.com/your-github/grocery-store-app
+cd grocery-store-app
+npm install
+npm start```
+
+
 
 
