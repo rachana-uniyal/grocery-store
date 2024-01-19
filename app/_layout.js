@@ -19,7 +19,7 @@ export default function Layout() {
   return (
           <FavoriteProvider>
             <CartProvider>
-            <Stack>
+            <Stack screenOptions={{ headerShown: false }}>
               <Stack.Screen name="home"/>   
             </Stack>
             </CartProvider>

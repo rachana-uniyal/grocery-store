@@ -8,7 +8,7 @@ const styles = StyleSheet.create({
       alignItems: 'center',
       height: 89,
       borderRadius:30,
-      backgroundColor: '#ffffff',
+      backgroundColor: 'white',
       shadowColor: 'rgba(163, 165, 184, 0.25)',
         shadowOffset: {
         width: -3,

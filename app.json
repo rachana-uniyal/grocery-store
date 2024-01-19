@@ -8,6 +8,17 @@
       "expo-router"
     ],
     "name": "grocery-store",
-    "slug": "grocery-store"
+    "slug": "grocery-store",
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "d11d50fb-160d-458d-b9fd-8eac08b6d1b1"
+      }
+    },
+    "android": {
+      "package": "com.uniyalrachna.grocerystore"
+    }
   }
 }

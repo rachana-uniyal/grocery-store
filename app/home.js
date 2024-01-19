@@ -12,7 +12,7 @@ const Home = () =>{
         <SafeAreaView>
             <ScrollView>
                 <FavoriteProvider>
-                    <View>
+                    <View >
                         <HeaderSection/>
                         <OfferSection/>
                         <RecommendedSection/>
