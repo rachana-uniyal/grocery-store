@@ -11,7 +11,6 @@ const ProductDetails = () =>{
     const router = useRouter();
 
     const { data, isLoading, error } = useFetch(params?.id, null);
-    console.log(data)
 
     const { addToCart,cart } = useCart()
 

@@ -1,5 +1,5 @@
-import React,{ useState, useRef} from 'react';
-import { View, Text, Image, TouchableOpacity,TouchableWithoutFeedback, Animated } from 'react-native';
+import React,{ useRef} from 'react';
+import { View, Text, Image, TouchableOpacity, Animated } from 'react-native';
 import { icons } from '../../constants';
 import styles from './footerSection.style.js';
 
@@ -31,8 +31,8 @@ const FooterButton = ({ iconPath, label }) => {
     <Animated.View style={[styles.footerButton, animatedStyle]}>
       <TouchableOpacity
         style={styles.iconButton}
-        onPressIn={handlePressIn}   // Add this line
-        onPressOut={handlePressOut} // Add this line
+        onPressIn={handlePressIn}   
+        onPressOut={handlePressOut} 
       >
         <Image source={iconPath} style={styles.icon} />
       </TouchableOpacity>

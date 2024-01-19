@@ -22,7 +22,6 @@ const ImageSlider = ({ images ,id}) => {
   const renderItem = ({ item }) => (
     <View style={style.imageWrapper}>
       <TouchableOpacity style={style.heartContainer} onPress={handleFavoritePress}>
-        {console.log("id",id)}
         {isFavorite(id) ?
           <Image source={icons.pinkheart} style={style.favIcon}/>:
           <Image source={icons.vector} style={style.favIcon}/>
@@ -42,7 +41,7 @@ const ImageSlider = ({ images ,id}) => {
       pagingEnabled
       showsHorizontalScrollIndicator={false}
       snapToAlignment={'center'}
-      snapToInterval={viewportWidth} // Your cell width here
+      snapToInterval={viewportWidth} 
       decelerationRate={'fast'}
     />
   );
