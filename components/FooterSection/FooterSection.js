@@ -45,11 +45,13 @@ const FooterButton = ({ iconPath, label }) => {
 
 const FooterSection = () => {
   return (
+    <View style={styles.container}>
     <View style={styles.footer}>
       <FooterButton iconPath={icons.home} label='Home'/>
       <FooterButton iconPath={icons.category} label='Categories'/>
       <FooterButton iconPath={icons.heart} label='Favourite'/>
       <FooterButton iconPath={icons.more} label='More'/>
+    </View>
     </View>
   );
 };

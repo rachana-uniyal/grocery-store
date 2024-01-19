@@ -2,6 +2,9 @@ import { StyleSheet } from "react-native"
 import { FONT, SIZES } from "../../constants";
 
 const styles = StyleSheet.create({
+    container:{
+      backgroundColor:'white'
+    },
     footer: {
       flexDirection: 'row',
       justifyContent: 'space-around',

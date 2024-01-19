@@ -4,7 +4,8 @@ import { COLORS, FONT, SIZES } from "../../constants";
 
 const styles = StyleSheet.create({
     container:{
-        backgroundColor:'white'
+        backgroundColor:'white',
+        height:'100%'
     },
     titleContainer:{
         height:126,
