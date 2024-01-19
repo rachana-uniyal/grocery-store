@@ -33,9 +33,10 @@ cd grocery-store-app
 npm install
 npm start
 
-## **Technology Stack**
-React Native
-Expo
-Expo-route for navigation
-Context API for state management
+## Technology Stack
+- React Native
+- Expo
+- Expo-route for navigation
+- Context API for state management
+
 
