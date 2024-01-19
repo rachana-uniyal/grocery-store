@@ -9,38 +9,9 @@ Frontend (Mobile Application)
 ## APK of App
 - https://drive.google.com/file/d/1QTEd-E19qYJkatlMF-lTSgot69rJxii-/view?usp=sharing
 
-## Directory Structure
-GroceryStoreApp/
-├── .expo/
-├── app/
-│ ├── cart/
-│ │ ├── cart.styles.js
-│ │ └── index.js
-│ ├── product-details/
-│ │ ├── [id].js
-│ │ ├── ImageSlider.js
-│ │ ├── imageSlider.styles.js
-│ │ └── productDetails.styles.js
-│ ├── _layout.js
-│ ├── home.js
-│ └── index.js
-├── assets/
-├── components/
-├── constants/
-├── context/
-├── hook/
-├── node_modules/
-├── .gitignore
-├── app.json
-├── babel.config.js
-├── eas.json
-├── package-lock.json
-├── package.json
-└── README.md
-
 ## Video Walkthrough
 - Project Features: https://vimeo.com/904371692/5edf3ca098?share=copy
-- Codebase Overview: [Codebase Walkthrough Link](#)
+- Codebase Overview: https://vimeo.com/904387426/0b549c8e65?share=copy
 
 ## Features
 - Home Screen with product browsing capability
